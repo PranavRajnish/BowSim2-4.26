@@ -1,0 +1,241 @@
+Begin Object Class=/Script/Engine.Material Name="M_Leaves"
+   Begin Object Class=/Script/Engine.MaterialExpressionAdd Name="MaterialExpressionAdd_1"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionAppendVector Name="MaterialExpressionAppendVector_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionConstant3Vector Name="MaterialExpressionConstant3Vector_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionDesaturation Name="MaterialExpressionDesaturation_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionLinearInterpolate Name="MaterialExpressionLinearInterpolate_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionMaterialFunctionCall Name="MaterialExpressionMaterialFunctionCall_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionMultiply Name="MaterialExpressionMultiply_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionMultiply Name="MaterialExpressionMultiply_1"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionMultiply Name="MaterialExpressionMultiply_2"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionScalarParameter Name="MaterialExpressionScalarParameter_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionScalarParameter Name="MaterialExpressionScalarParameter_1"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionScalarParameter Name="MaterialExpressionScalarParameter_2"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionScalarParameter Name="MaterialExpressionScalarParameter_3"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureCoordinate Name="MaterialExpressionTextureCoordinate_1"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureSample Name="MaterialExpressionTextureSample_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureSample Name="MaterialExpressionTextureSample_2"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTwoSidedSign Name="MaterialExpressionTwoSidedSign_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionVectorParameter Name="MaterialExpressionVectorParameter_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionVectorParameter Name="MaterialExpressionVectorParameter_1"
+   End Object
+   Begin Object Class=/Script/UnrealEd.SceneThumbnailInfoWithPrimitive Name="SceneThumbnailInfoWithPrimitive_0"
+   End Object
+   Begin Object Name="MaterialExpressionAdd_1"
+      A=(Expression=MaterialExpressionMaterialFunctionCall'"M_Leaves:MaterialExpressionMaterialFunctionCall_0"')
+      B=(Expression=MaterialExpressionLinearInterpolate'"M_Leaves:MaterialExpressionLinearInterpolate_0"')
+      MaterialExpressionEditorX=-560
+      MaterialExpressionEditorY=-48
+      MaterialExpressionGuid=87BC3B714743955DC9B215B3F0E64159
+      Material=Material'"M_Leaves"'
+   End Object
+   Begin Object Name="MaterialExpressionAppendVector_0"
+      A=(Expression=MaterialExpressionScalarParameter'"M_Leaves:MaterialExpressionScalarParameter_0"')
+      B=(Expression=MaterialExpressionScalarParameter'"M_Leaves:MaterialExpressionScalarParameter_2"')
+      MaterialExpressionEditorX=-1520
+      MaterialExpressionEditorY=96
+      MaterialExpressionGuid=47554C4D42E1676B1250DEA6EB4D0DF6
+      Material=Material'"M_Leaves"'
+   End Object
+   Begin Object Name="MaterialExpressionConstant3Vector_0"
+      Constant=(R=0.000000,G=0.000000,B=1.000000,A=0.000000)
+      MaterialExpressionEditorX=-304
+      MaterialExpressionEditorY=256
+      MaterialExpressionGuid=134BCD734E039E1B65094EA4653A5B74
+      Material=Material'"M_Leaves"'
+   End Object
+   Begin Object Name="MaterialExpressionDesaturation_0"
+      Input=(Expression=MaterialExpressionTextureSample'"M_Leaves:MaterialExpressionTextureSample_0"',Mask=1,MaskR=1,MaskG=1,MaskB=1)
+      LuminanceFactors=(R=0.300000,G=0.590000,B=0.116470,A=0.000000)
+      MaterialExpressionEditorX=-928
+      MaterialExpressionEditorY=-96
+      MaterialExpressionGuid=FB901689486F07580C4A4FB486E9DE3F
+      Material=Material'"M_Leaves"'
+   End Object
+   Begin Object Name="MaterialExpressionLinearInterpolate_0"
+      A=(Expression=MaterialExpressionVectorParameter'"M_Leaves:MaterialExpressionVectorParameter_0"',Mask=1,MaskR=1,MaskG=1,MaskB=1)
+      B=(Expression=MaterialExpressionVectorParameter'"M_Leaves:MaterialExpressionVectorParameter_1"',Mask=1,MaskR=1,MaskG=1,MaskB=1)
+      Alpha=(Expression=MaterialExpressionTextureSample'"M_Leaves:MaterialExpressionTextureSample_2"',OutputIndex=1,Mask=1,MaskR=1)
+      MaterialExpressionEditorX=-816
+      MaterialExpressionEditorY=288
+      MaterialExpressionGuid=6BAAB6E54DE2BF94C80917B8C16C7712
+      Material=Material'"M_Leaves"'
+   End Object
+   Begin Object Name="MaterialExpressionMaterialFunctionCall_0"
+      MaterialFunction=MaterialFunction'"/Engine/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.CheapContrast"'
+      FunctionInputs(0)=(ExpressionInputId=95C9DA0E48D34168E34AD3A607BAA34E,Input=(Expression=MaterialExpressionDesaturation'"M_Leaves:MaterialExpressionDesaturation_0"',InputName="In"))
+      FunctionInputs(1)=(ExpressionInputId=3C3E177E485D8FFFC35D1482F0A20020,Input=(Expression=MaterialExpressionScalarParameter'"M_Leaves:MaterialExpressionScalarParameter_3"',InputName="Contrast"))
+      FunctionOutputs(0)=(ExpressionOutputId=5067ED8C4A2EFE82DB33F99EBE37E80E,Output=(OutputName="Result"))
+      MaterialExpressionEditorX=-784
+      MaterialExpressionEditorY=-96
+      MaterialExpressionGuid=F89C029740825769CED6008BCB8A5B9F
+      Material=Material'"M_Leaves"'
+      Outputs(0)=(OutputName="Result")
+   End Object
+   Begin Object Name="MaterialExpressionMultiply_0"
+      A=(Expression=MaterialExpressionTextureCoordinate'"M_Leaves:MaterialExpressionTextureCoordinate_1"')
+      B=(Expression=MaterialExpressionAppendVector'"M_Leaves:MaterialExpressionAppendVector_0"')
+      MaterialExpressionEditorX=-1408
+      MaterialExpressionEditorY=32
+      MaterialExpressionGuid=CF109ECB48F8791FFCAF5888D8442A90
+      Material=Material'"M_Leaves"'
+   End Object
+   Begin Object Name="MaterialExpressionMultiply_1"
+      A=(Expression=MaterialExpressionAdd'"M_Leaves:MaterialExpressionAdd_1"')
+      B=(Expression=MaterialExpressionScalarParameter'"M_Leaves:MaterialExpressionScalarParameter_1"')
+      MaterialExpressionEditorX=-144
+      MaterialExpressionEditorY=128
+      MaterialExpressionGuid=DFC70CE14B69921536B4109622D3EC37
+      Material=Material'"M_Leaves"'
+   End Object
+   Begin Object Name="MaterialExpressionMultiply_2"
+      A=(Expression=MaterialExpressionConstant3Vector'"M_Leaves:MaterialExpressionConstant3Vector_0"')
+      B=(Expression=MaterialExpressionTwoSidedSign'"M_Leaves:MaterialExpressionTwoSidedSign_0"')
+      MaterialExpressionEditorX=-128
+      MaterialExpressionEditorY=352
+      MaterialExpressionGuid=986DFF1A4414099CFEC5B2A4AEE49C1F
+      Material=Material'"M_Leaves"'
+   End Object
+   Begin Object Name="MaterialExpressionScalarParameter_0"
+      DefaultValue=2.000000
+      ParameterName="U"
+      ExpressionGUID=A9BD218E4A19F30F99116A95757FD1D7
+      MaterialExpressionEditorX=-1648
+      MaterialExpressionEditorY=96
+      MaterialExpressionGuid=20A7D5DD4E9464B94DFC378C85323B02
+      Material=Material'"M_Leaves"'
+   End Object
+   Begin Object Name="MaterialExpressionScalarParameter_1"
+      DefaultValue=0.300000
+      ParameterName="Emis"
+      ExpressionGUID=147525B443C28A4DB2AE989914E9139F
+      MaterialExpressionEditorX=-320
+      MaterialExpressionEditorY=176
+      MaterialExpressionGuid=19A8126C4F60C6280FE45D890EF3D203
+      Material=Material'"M_Leaves"'
+   End Object
+   Begin Object Name="MaterialExpressionScalarParameter_2"
+      DefaultValue=2.000000
+      ParameterName="V"
+      ExpressionGUID=D5452F4542EF04B1191899BD88D541DF
+      MaterialExpressionEditorX=-1648
+      MaterialExpressionEditorY=176
+      MaterialExpressionGuid=20A7D5DD4E9464B94DFC378C85323B02
+      Material=Material'"M_Leaves"'
+   End Object
+   Begin Object Name="MaterialExpressionScalarParameter_3"
+      DefaultValue=0.100000
+      ParameterName="DesatFactor"
+      ExpressionGUID=B70C33A44B288B5887476E83C7F95473
+      MaterialExpressionEditorX=-928
+      MaterialExpressionGuid=87AF5D1649BF213C96C55ABE90453FA7
+      Material=Material'"M_Leaves"'
+   End Object
+   Begin Object Name="MaterialExpressionTextureCoordinate_1"
+      MaterialExpressionEditorX=-1552
+      MaterialExpressionEditorY=32
+      MaterialExpressionGuid=C531C0824C0C2873889CFEA8B866A3C1
+      Material=Material'"M_Leaves"'
+   End Object
+   Begin Object Name="MaterialExpressionTextureSample_0"
+      Coordinates=(Expression=MaterialExpressionMultiply'"M_Leaves:MaterialExpressionMultiply_0"')
+      Texture=Texture2D'"/Game/Textures/T_TreeLeaves.T_TreeLeaves"'
+      MaterialExpressionEditorX=-1232
+      MaterialExpressionEditorY=-96
+      MaterialExpressionGuid=8195B8384C7A31A672E9ACAFAFF4E4EE
+      Material=Material'"M_Leaves"'
+   End Object
+   Begin Object Name="MaterialExpressionTextureSample_2"
+      Coordinates=(Expression=MaterialExpressionMultiply'"M_Leaves:MaterialExpressionMultiply_0"')
+      Texture=Texture2D'"/Game/Textures/TreeLeavesMask.TreeLeavesMask"'
+      MaterialExpressionEditorX=-1232
+      MaterialExpressionEditorY=128
+      MaterialExpressionGuid=310F8A0E44F397889458E6AE97BCDB22
+      Material=Material'"M_Leaves"'
+   End Object
+   Begin Object Name="MaterialExpressionTwoSidedSign_0"
+      MaterialExpressionEditorX=-288
+      MaterialExpressionEditorY=400
+      MaterialExpressionGuid=9A1A75934F569151176EBFBAC1804C86
+      Material=Material'"M_Leaves"'
+   End Object
+   Begin Object Name="MaterialExpressionVectorParameter_0"
+      DefaultValue=(R=0.025187,G=0.597202,B=0.057805,A=1.000000)
+      ParameterName="Color1"
+      ExpressionGUID=6A74D8524A7E6BB1475C909B1538C3C5
+      MaterialExpressionEditorX=-1168
+      MaterialExpressionEditorY=368
+      MaterialExpressionGuid=6B4B27E547F33797755663B545221915
+      Material=Material'"M_Leaves"'
+   End Object
+   Begin Object Name="MaterialExpressionVectorParameter_1"
+      DefaultValue=(R=0.036420,G=0.607000,B=0.207594,A=1.000000)
+      ParameterName="Color2"
+      ExpressionGUID=F17B333C4D4AB06CEBD810B7CA7AA32B
+      MaterialExpressionEditorX=-1168
+      MaterialExpressionEditorY=560
+      MaterialExpressionGuid=6B4B27E547F33797755663B545221915
+      Material=Material'"M_Leaves"'
+   End Object
+   Begin Object Name="SceneThumbnailInfoWithPrimitive_0"
+   End Object
+   BaseColor=(Expression=MaterialExpressionAdd'"MaterialExpressionAdd_1"')
+   Normal=(Expression=MaterialExpressionMultiply'"MaterialExpressionMultiply_2"')
+   EmissiveColor=(Expression=MaterialExpressionMultiply'"MaterialExpressionMultiply_1"')
+   OpacityMask=(Expression=MaterialExpressionTextureSample'"MaterialExpressionTextureSample_0"',OutputIndex=4,Mask=1,MaskA=1)
+   BlendMode=BLEND_Masked
+   bUsedWithStaticLighting=True
+   Expressions(0)=MaterialExpressionAdd'"MaterialExpressionAdd_1"'
+   Expressions(1)=MaterialExpressionMultiply'"MaterialExpressionMultiply_2"'
+   Expressions(2)=MaterialExpressionMultiply'"MaterialExpressionMultiply_1"'
+   Expressions(3)=MaterialExpressionTextureSample'"MaterialExpressionTextureSample_0"'
+   Expressions(4)=MaterialExpressionTextureCoordinate'"MaterialExpressionTextureCoordinate_1"'
+   Expressions(5)=MaterialExpressionScalarParameter'"MaterialExpressionScalarParameter_0"'
+   Expressions(6)=MaterialExpressionScalarParameter'"MaterialExpressionScalarParameter_2"'
+   Expressions(7)=MaterialExpressionAppendVector'"MaterialExpressionAppendVector_0"'
+   Expressions(8)=MaterialExpressionMultiply'"MaterialExpressionMultiply_0"'
+   Expressions(9)=MaterialExpressionScalarParameter'"MaterialExpressionScalarParameter_1"'
+   Expressions(10)=MaterialExpressionTwoSidedSign'"MaterialExpressionTwoSidedSign_0"'
+   Expressions(11)=MaterialExpressionConstant3Vector'"MaterialExpressionConstant3Vector_0"'
+   Expressions(12)=MaterialExpressionDesaturation'"MaterialExpressionDesaturation_0"'
+   Expressions(13)=MaterialExpressionVectorParameter'"MaterialExpressionVectorParameter_0"'
+   Expressions(14)=MaterialExpressionVectorParameter'"MaterialExpressionVectorParameter_1"'
+   Expressions(15)=MaterialExpressionLinearInterpolate'"MaterialExpressionLinearInterpolate_0"'
+   Expressions(16)=MaterialExpressionTextureSample'"MaterialExpressionTextureSample_2"'
+   Expressions(17)=MaterialExpressionScalarParameter'"MaterialExpressionScalarParameter_3"'
+   Expressions(18)=MaterialExpressionMaterialFunctionCall'"MaterialExpressionMaterialFunctionCall_0"'
+   ParameterGroupData(0)=(GroupName="None")
+   ParameterGroupData(1)=(GroupName="None")
+   ParameterGroupData(2)=(GroupName="None")
+   ParameterGroupData(3)=(GroupName="None")
+   ParameterGroupData(4)=(GroupName="None")
+   ParameterGroupData(5)=(GroupName="None")
+   StateId=2667E09F4B8B13BFB98153BCA9DFF3A1
+   CachedExpressionData=(Parameters=(RuntimeEntries[0]=(NameHashes=(987150638236639199,9056924184620548384,12994433824372438813,15562554874777189737),ParameterInfos=((Name="DesatFactor"),(Name="Emis"),(Name="U"),(Name="V")),ExpressionGuids=(B70C33A44B288B5887476E83C7F95473,147525B443C28A4DB2AE989914E9139F,A9BD218E4A19F30F99116A95757FD1D7,D5452F4542EF04B1191899BD88D541DF),Overrides=(False,False,False,False)),RuntimeEntries[1]=(NameHashes=(10975057850833063825,16001865301981087660),ParameterInfos=((Name="Color2"),(Name="Color1")),ExpressionGuids=(F17B333C4D4AB06CEBD810B7CA7AA32B,6A74D8524A7E6BB1475C909B1538C3C5),Overrides=(False,False)),ScalarValues=(0.100000,0.300000,2.000000,2.000000),VectorValues=((R=0.036420,G=0.607000,B=0.207594,A=1.000000),(R=0.025187,G=0.597202,B=0.057805,A=1.000000)),ScalarMinMaxValues=((X=0.000000,Y=0.000000),(X=0.000000,Y=0.000000),(X=0.000000,Y=0.000000),(X=0.000000,Y=0.000000)),ScalarCurveValues=(None,None,None,None),ScalarCurveAtlasValues=(None,None,None,None),VectorChannelNameValues=((),()),VectorUsedAsChannelMaskValues=(False,False)),ReferencedTextures=(Texture2D'"/Game/Textures/T_TreeLeaves.T_TreeLeaves"',Texture2D'"/Game/Textures/TreeLeavesMask.TreeLeavesMask"'),FunctionInfos=((StateId=B7C71B914E2BB667772D6CBE2AB55665,Function=MaterialFunction'"/Engine/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.LinearGradient"'),(StateId=1F3C7ECC4653CAFB2A6AEE82B1F2F3A5,Function=MaterialFunction'"/Engine/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.CheapContrast"')),QualityLevelsUsed=(False,False,False,False))
+   ReferencedTextureGuids(0)=2B865C3F45A48CAC2C1CF5B5578C1B6E
+   ReferencedTextureGuids(1)=5D43BB214055A5BE4DBC1987A7175CBE
+   TextureStreamingDataVersion=1
+   TextureStreamingData(0)=(SamplingScale=2.000000,UVChannelIndex=0,TextureName="T_TreeLeaves",TextureReference=/Game/Textures/T_TreeLeaves.T_TreeLeaves)
+   TextureStreamingData(1)=(SamplingScale=2.000000,UVChannelIndex=0,TextureName="TreeLeavesMask",TextureReference=/Game/Textures/TreeLeavesMask.TreeLeavesMask)
+   ThumbnailInfo=SceneThumbnailInfoWithPrimitive'"SceneThumbnailInfoWithPrimitive_0"'
+   ParameterOverviewExpansion=(("-12Global", True))
+   LightingGuid=B7FC2DFB42E6230044E4839618E68F75
+End Object
